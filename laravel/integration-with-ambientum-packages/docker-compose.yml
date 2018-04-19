@@ -1,0 +1,35 @@
+# v3.5 syntax
+version: '3.5'
+
+# Named volumes
+volumes:
+  # MySQL Data
+  laravelProject-mysql-data:
+    driver: local
+
+services:
+  # MySQL (5.7)
+  mysql:
+    image: ambientum/mysql:5.7
+    container_name: laravelProject-mysql
+    volumes:
+      - laravelProject-mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=laravelProject
+      - MYSQL_DATABASE=laravelProject
+      - MYSQL_USER=laravelProject
+      - MYSQL_PASSWORD=laravelProject
+
+  # php:7.2-nginx
+  app:
+    image: ambientum/php:7.2-nginx
+    container_name: laravelProject-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8000:8080"
+    links:
+      - mysql
+      
