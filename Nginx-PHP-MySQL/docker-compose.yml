@@ -1,11 +1,12 @@
 version: '3.5'
+services:
   nginx:
     build: .
     volumes:
       - ./web:/var/www/html
       - ./server/vhost.conf:/etc/nginx/conf.d/vhost.conf
     ports:
-      - "80:80"
+      - "8000:80"
     links:
       - mysql
 
