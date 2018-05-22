@@ -1,13 +1,15 @@
-varnish:
-  build: .
-  volumes:
-    - ./default.vcl:/etc/varnish/default.vcl
-  links:
-    - web:web
-  ports:
-    - 80:80
+version: '3.5'
+services:
+  varnish:
+    build: .
+    volumes:
+      - ./default.vcl:/etc/varnish/default.vcl
+    links:
+      - web:web
+    ports:
+      - 80:80
 
-web:
-  image: tutum/apache-php
-  ports:
-    - 80
+  web:
+    image: tutum/apache-php
+    ports:
+      - 80
