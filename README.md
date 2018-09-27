@@ -3,7 +3,7 @@
 ``` This repository is deprecated ```
 
 This repository has been moved to another location. You can follow the updates here:
-[Docker Pack tools](https://github.com/atmosmaciel/docker-pack-tools)
+[Docker Pack tools](https://github.com/atmosmps/docker-pack-tools)
 
 ## The Docker Pack Tools for Heptum Projects - ```under construction```
 
@@ -28,4 +28,4 @@ With Heptum Images
 
 ## Others Projects With Docker
 
-[App Docker Redmine](https://github.com/atmosmaciel/app-docker-redmine)
+[App Docker Redmine](https://github.com/atmosmps/app-docker-redmine)
